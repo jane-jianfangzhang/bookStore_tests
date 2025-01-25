@@ -23,6 +23,10 @@ jobs:
         continue-on-error: true
         run: npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/report,overwrite=false,html=false,json=true
       
+      - name: List Files
+        continue-on-error: true
+        run: ls -lah . || ls -lah cypress/report || ls -lah bookStore_tests || ls -lah bookStore_tests/cypress
+
       # Merge the reports
       - name: Merge all the reports
         run: npx mochawesome-merge bookStore_tests/cypress/report/*.json > bookStore_tests/cypress/report/merged-report.json
