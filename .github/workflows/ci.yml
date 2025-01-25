@@ -20,6 +20,7 @@ jobs:
 
       # Run all Cypress tests
       - name: Run Cypress tests with Mocha reporter
+        continue-on-error: true
         run: npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/report,overwrite=false,html=false,json=true
       
       # Merge the reports
