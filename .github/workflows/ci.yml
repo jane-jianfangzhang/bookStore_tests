@@ -28,8 +28,8 @@ jobs:
           npx mochawesome-report-generator cypress/report/merged-report.json --reportDir cypress/report --reportFilename book-store-testing-report
 
       #Upload HTML report
-    - name: Upload Cypress report as artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: cypress-html-report
-        path: cypress/report/book-store-testing-report.html
+      - name: Upload Cypress report as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-html-report
+          path: cypress/report/book-store-testing-report.html
