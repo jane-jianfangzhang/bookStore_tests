@@ -51,4 +51,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: cypress-html-report
-          path: cypress/report/book-store-testing-report.html
+          path: cypress/report/*
