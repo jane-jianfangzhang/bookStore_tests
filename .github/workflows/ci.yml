@@ -25,16 +25,16 @@ jobs:
       
       - name: List Files
         continue-on-error: true
-        run: ls -lah . ; ls -lah cypress/report ; ls -lah bookStore_tests ; ls -lah bookStore_tests/cypress
+        run: ls -lah cypress/report 
 
       # Merge the reports
       - name: Merge all the reports
-        run: npx mochawesome-merge bookStore_tests/cypress/report/*.json > bookStore_tests/cypress/report/merged-report.json
-          npx mochawesome-report-generator bookStore_tests/cypress/report/merged-report.json --reportDir bookStore_tests/cypress/report --reportFilename book-store-testing-report
+        run: npx mochawesome-merge cypress/report/*.json > cypress/report/merged-report.json
+          npx mochawesome-report-generator cypress/report/merged-report.json --reportDir cypress/report --reportFilename book-store-testing-report
 
       #Upload HTML report
       - name: Upload Cypress report as artifact
         uses: actions/upload-artifact@v3
         with:
           name: cypress-html-report
-          path: bookStore_tests/cypress/report/book-store-testing-report.html
+          path: cypress/report/book-store-testing-report.html
