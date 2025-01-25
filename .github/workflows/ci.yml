@@ -19,8 +19,8 @@ jobs:
         run: npm install      
       
       # Install cypress and Mocha
-      - name: Install Cypress and Mocha Reporter
-        run:  npm install cypress mochawesome mochawesome-merge mochawesome-report-generator
+      # - name: Install Cypress and Mocha Reporter
+      #   run:  npm install cypress mochawesome mochawesome-merge mochawesome-report-generator
 
       # Run all Cypress tests
       - name: Run Cypress tests with Mocha reporter
