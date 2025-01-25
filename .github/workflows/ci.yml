@@ -29,7 +29,8 @@ jobs:
 
       # Merge the reports
       - name: Merge all the reports
-        run: npx mochawesome-merge cypress/report/*.json > cypress/report/merged-report.json
+        run: 
+          npx mochawesome-merge cypress/report/*.json > cypress/report/merged-report.json
           npx mochawesome-report-generator cypress/report/merged-report.json --reportDir cypress/report --reportFilename book-store-testing-report
 
       #Upload HTML report
