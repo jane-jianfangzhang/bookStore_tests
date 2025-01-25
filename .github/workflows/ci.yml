@@ -13,6 +13,10 @@ jobs:
       # Copy code from repo
       - name: Checkout
         uses: actions/checkout@v4
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm install      
       
       # Install cypress and Mocha
       - name: Install Cypress and Mocha Reporter
