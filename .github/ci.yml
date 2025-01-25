@@ -1,0 +1,30 @@
+name: Book store e2e Tests
+
+on: push
+jobs:
+  cypress-run:
+    runs-on: ubuntu-24.04
+    steps:
+      # Copy code from repo
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      # Install cypress and Mocha
+      - name: Install Cypress and Mocha Reporter
+        run:  npm install cypress mochawesome mochawesome-merge mochawesome-report-generator
+
+      # Run all Cypress tests
+      - name: Run Cypress tests with Mocha reporter
+        run: npx cypress run --reporter mochawesome --reporter-options reportDir=cypress/report,overwrite=false,html=false,json=true
+      
+      # Merge the reports
+      - name: Merge all the reports
+        run: npx mochawesome-merge cypress/report/*.json > cypress/report/merged-report.json
+          npx mochawesome-report-generator cypress/report/merged-report.json --reportDir cypress/report --reportFilename book-store-testing-report
+
+      #Upload HTML report
+    - name: Upload Cypress report as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: cypress-html-report
+        path: cypress/report/book-store-testing-report.html
