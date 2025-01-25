@@ -2,7 +2,8 @@ name: Book store e2e Tests
 
 on: push
 jobs:
-  cypress-run:
+  run:
+    name: "cypress-run"
     runs-on: ubuntu-24.04
     steps:
       # Copy code from repo
