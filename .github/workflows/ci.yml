@@ -25,7 +25,7 @@ jobs:
       
       - name: List Files
         continue-on-error: true
-        run: ls -lah . || ls -lah cypress/report || ls -lah bookStore_tests || ls -lah bookStore_tests/cypress
+        run: ls -lah . ; ls -lah cypress/report ; ls -lah bookStore_tests ; ls -lah bookStore_tests/cypress
 
       # Merge the reports
       - name: Merge all the reports
