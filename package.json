@@ -1,0 +1,31 @@
+{
+  "name": "bookstore_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "merge-reports": "mochawesome-merge cypress/report/*.json > cypress/report/merged-report.json && mochawesome-report-generator cypress/report/merged-report.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jane-jianfangzhang/bookStore_tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jane-jianfangzhang/bookStore_tests/issues"
+  },
+  "homepage": "https://github.com/jane-jianfangzhang/bookStore_tests#readme",
+  "devDependencies": {
+    "@types/cypress": "^0.1.6",
+    "@types/node": "^22.10.10",
+    "cypress": "^14.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "typescript": "^5.7.3"
+  }
+}

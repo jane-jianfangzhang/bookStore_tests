@@ -1,0 +1,15 @@
+{
+    "validBook": {
+        "Title": "Git Pocket Guide",
+        "author": "Richard E. Silverman",
+        "Publisher": "O'Reilly Media"
+    },
+    "invalidBook": {
+        "Title": "123",
+        "author": "123",
+        "Publisher": "23232fer"
+    },
+    "messages": {
+        "noRowsFound": "No rows found"
+    }
+}

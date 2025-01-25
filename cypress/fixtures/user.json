@@ -1,0 +1,15 @@
+{
+    "validUser":{
+        "userName":"test00",
+        "password":"4zr*Ky48arC8a_m"
+    },
+    "invalidUser":{
+        "userName":"noregist",
+        "password":"123"
+    },
+    "erroMessage": {
+        "invaildLogin": "Invalid username or password!"
+
+    }
+   
+}
