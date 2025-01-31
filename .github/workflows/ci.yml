@@ -9,6 +9,9 @@ jobs:
   run:
     name: "cypress-run"
     runs-on: ubuntu-24.04
+    container:
+      image: cypress/included:13.16.0
+      
     steps:
       # Copy code from repo
       - name: Checkout
